@@ -10,15 +10,15 @@ import logger from 'redux-logger';
 
 import { Provider } from 'react-redux';
 
-// import { reducer } from './reducers';
+import { reducer } from './reducers';
 
-// const store = createStore(reducer, applyMiddleware(thunk, logger))
+const store = createStore(reducer, applyMiddleware(thunk, logger))
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    <App />
-    {/* </Provider> */}
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
