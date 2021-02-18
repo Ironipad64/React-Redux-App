@@ -10,18 +10,22 @@ import { getImage } from '../actions';
 const Cats = (props) => {
     const { url, error } = props;
 
-    const handleClick = () => {
-        props.getImage();
-    }
+    // const handleClick = () => {
+    //     props.getImage();
+    // }
+    useEffect(() => {
+        props.getImage()
+    }, []);
+
     return (
         <>
             <div>
                 <StyledCats>
-                    <hi>Images go here</hi>
+                    <h1>Images go here</h1>
 
                     <img alt="" src={url} />
 
-                    <button onClick={handleClick}>Next Image</button>
+                    {/* <button onClick={handleClick}>Next Image</button> */}
                 </StyledCats>
             </div>
         </>

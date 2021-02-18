@@ -1,7 +1,7 @@
 import { FETCH_IMAGE_LOADING, FETCH_IMAGE_SUCCESS, FETCH_IMAGE_FAIL } from './../actions'
 
 const initialState = {
-    url: {},
+    url: "",
     // isFetching: false,
     error: ''
 }
